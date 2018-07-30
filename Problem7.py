@@ -2,6 +2,9 @@
 # write a function that returns the largest sum of non-adjacent numbers.
 # Numbers can be 0 or negative.
 
+#This method find the largest sum by finding the sum of previous numbers that are not adjacent
+#And comparing it to the current sum of non adjacent numbers
+
 
 def largest_sum(numlist):
     current_sum = 0
