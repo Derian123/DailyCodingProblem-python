@@ -13,10 +13,29 @@ def number_of_ways(steps):
         numlist.append(numlist[i-2] + numlist[i-1])
     return numlist[steps]
 
+# to get the number of ways given the number of steps
+# We have to check if step - numSteps[i] < 0
+# Else we append numSteps[steps - index]
+
+
+def number_of_ways_given_steps(steps, numsteps):
+    numlist = [1, 1]
+    total = 0
+    for i in range(2, steps + 1):
+        numlist.append(numlist[i - 2] + numlist[i - 1])
+    for num in numsteps:
+        if steps - num < 0:
+            pass
+        else:
+            total += numlist[steps-num]
+    return total
+
 
 def main():
-    steps = 4
+    steps = 5
+    numlist = [1, 2]
     print(number_of_ways(steps))
+    print(number_of_ways_given_steps(4, numlist))
 
 
 main()
