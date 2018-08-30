@@ -43,7 +43,7 @@ def isvalid(string):
     if not s.isempty():
         # We return false if that is the case
         return False
-    # If everything has passed then the string must be valid
+    # If everything has passed then the string must be valid.
     return True
 
 
